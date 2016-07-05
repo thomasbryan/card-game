@@ -1,4 +1,5 @@
 var express = require('express')
+  , port = process.env.PORT || 8080
   , compress = require('compression')
   , app = express()
   , http = require('http')
@@ -11,7 +12,7 @@ var express = require('express')
   , games = {}
   , state = {}
   ;
-server.listen(3407);
+server.listen(port);
 console.log("http://localhost:3407");
 app.use(compress({ threshold: 1 }));
 app.use(express.static('pub'));
