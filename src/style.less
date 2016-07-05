@@ -1,0 +1,106 @@
+@import "node_modules/bootstrap/less/bootstrap.less";
+body {
+  padding-top: 40px;
+  padding-bottom: 50px;
+}
+.navbar-header.left { float:left !important; }
+.navbar-header.right { float:right !important;}
+.navbar{min-height:40px; }
+.main {
+  overflow-y:scroll;
+  position:fixed;
+  top:40px;
+  left:0px;
+  right:0px;
+  bottom:50px;
+}
+.chat {
+  overflow-y:scroll;
+  position:fixed;
+  top:50px;
+  left:10px;
+  right:10px;
+  bottom:94px;
+  background-color:white;
+  z-index:10;
+  border: 1px solid black;
+}
+.chatInput {
+  position:fixed;
+  bottom:60px;
+  left:10px;
+  right:10px;
+}
+.updateChat{
+  position:absolute;
+  width:100%;
+  bottom:0px;
+  left:0px;
+  right:0px;
+}
+.card.card1 { &::before { content: "1"; }
+  &::after {
+    content: "Pick player and number between 2 - 8";
+  }
+}
+.card.card2 { &::before { content: "2"; }
+  &::after {
+    content: "Pick player to look at hand";
+  }
+}
+.card.card3 { &::before { content: "3"; }
+  &::after {
+    content: "Pick player low card out";
+  }
+}
+.card.card4 { &::before { content: "4"; }
+  &::after {
+    content: "Protected until your next turn";
+  }
+}
+.card.card5 { &::before { content: "5"; }
+  &::after {
+    content: "Pick player to discard and draw new hand";
+  }
+}
+.card.card6 { &::before { content: "6"; }
+  &::after {
+    content: "Pick player to trade hands";
+  }
+}
+.card.card7 { &::before { content: "7"; }
+  &::after {
+    content: "Discard if you have card 5 or card 6";
+  }
+}
+.card.card8 { &::before { content: "8"; }
+  &::after {
+    content: "Out if discarded";
+  }
+}
+.card {
+  width:200px;
+  height:280px;
+  margin: 0 1em 1em 0;
+  background: #cecece;
+  &::before {
+    font-size: 90px;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 50%;
+    left: 0;
+  }
+  &::after {
+    padding: 0.5em;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+}
+.discard {opacity:0.5;}
+.current {text-decoration:underline;}
+.self {font-weight:bold;}

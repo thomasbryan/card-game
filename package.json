@@ -1,0 +1,31 @@
+{
+  "name": "cg",
+  "version": "0.7.8",
+  "description": "Card Game",
+  "private": true,
+  "dependencies": {
+    "compression": "1.0.3",
+    "express": "4.4.0",
+    "node-uuid": "1.4.1",
+    "socket.io": "1.0.3",
+    "jquery": "1.11.1",
+    "bootstrap": "3.1.1",
+    "grunt": "latest",
+    "grunt-contrib-concat": "latest",
+    "grunt-contrib-copy": "latest",
+    "grunt-contrib-less": "latest",
+    "grunt-contrib-uglify": "latest",
+    "grunt-minify-html": "latest",
+    "load-grunt-tasks":"latest"
+  },
+  "devDependencies": {
+    "express": "latest",
+    "grunt-concurrent": "latest",
+    "grunt-contrib-watch": "latest",
+    "grunt-nodemon": "latest"
+  },
+  "scripts": {
+    "postinstall": "grunt --env=$NODE_ENV"
+  },
+  "engine": "node >= 0.11.12"
+}
