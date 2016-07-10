@@ -1,5 +1,5 @@
 var express = require('express')
-  , port = process.env.PORT || 8080
+  , port = process.env.OPENSHIFT_NODEJS_PORT || 8080
   , compress = require('compression')
   , app = express()
   , http = require('http')
