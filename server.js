@@ -1,5 +1,6 @@
 var express = require('express')
   , port = process.env.OPENSHIFT_NODEJS_PORT || 8080
+  , ip = process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1'
   , compress = require('compression')
   , app = express()
   , http = require('http')
@@ -12,7 +13,7 @@ var express = require('express')
   , games = {}
   , state = {}
   ;
-server.listen(port);
+server.listen(port,ip);
 console.log("http://localhost:3407");
 app.use(compress({ threshold: 1 }));
 app.use(express.static('pub'));
