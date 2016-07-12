@@ -27,5 +27,6 @@
   "scripts": {
     "postinstall": "grunt --env=$NODE_ENV"
   },
+  "main": "server.js",
   "engine": "node >= 0.11.12"
 }
